@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Tab Organizer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>Smart Tab Organizer</h1>
+    </header>
+
+    <!-- Group Tabs Section -->
+    <section aria-labelledby="group-tabs-section">
+      <div class="button-group">
+        <button id="groupTabs" class="btn primary" title="Group all open tabs">Group Tabs</button>
+        <button id="groupTabsWithName" class="btn secondary" title="Group tabs under a domain name">
+          Group Tabs with domain name
+        </button> 
+        <button id="ungroupTabs" class="btn danger" title="Ungroup all tabs">Remove Grouping</button>      
+      </div>
+    </section>
+
+    <!-- Save and Restore Session Section -->
+    <section aria-labelledby="session-section">
+      <div class="button-group">
+        <button id="saveSession" class="btn" title="Save the current tab session">Save Session</button>
+        <button id="restoreSession" class="btn" title="Restore the previously saved tab session">Restore Session</button>
+        <button id="clearSession" class="btn" title="Clear the saved session">Clear Session</button>
+      </div>
+      <ul id="savedSessions" class="session-list" aria-label="Saved sessions list"></ul>
+    </section>
+
+    <!-- Search Tabs Section -->
+    <section aria-labelledby="search-tabs-section">
+      <div class="search-container">
+      <input 
+        type="text" 
+        id="searchInput" 
+        placeholder="Search tabs..." 
+        aria-label="Search tabs" 
+        class="input-field">
+        <button id="clearSearch" aria-label="Clear search">✖</button>
+      </div>
+      <ul id="searchResults" class="results-list" aria-label="Search results"></ul>
+    </section>
+
+    <!-- Favorites Section -->
+    <section aria-labelledby="favorites-section">
+      <button id="addFavorite" class="btn highlight" title="Add the current tab to your favorites">Add Current Tab to Favorites</button>
+      <ul id="favoriteTabs" class="favorites-list" aria-label="Favorite tabs list"></ul>
+    </section>
+
+    <!-- Close Duplicates Section -->
+    <section aria-labelledby="duplicates-section">
+      <button id="closeDuplicates" class="btn danger" title="Close duplicate tabs">Close Duplicate Tabs</button>
+    </section>
+  </main>
+
+  <script src="popup.js"></script>
+</body>
+</html>
